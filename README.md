@@ -2,7 +2,7 @@
 
 This repository contains one primary notebook:
 
-- **`oral-cancer-efficientnet-b4-model (3).ipynb`**
+- **`oral-cancer-efficientnet-b4-model (3).ipynb`** *(legacy filename; notebook content includes DINOv2 and multi-architecture experiments)*
 
 The notebook is a full end-to-end deep learning workflow for **oral cancer image classification**, including data preparation, patient-safe splitting, ROI processing, augmentation, training, evaluation, and result export.
 
@@ -93,7 +93,7 @@ A second large section in the notebook extends the project to a broader architec
 
 From the DINOv2 configuration blocks:
 
-- Image size: **518 × 518**
+- Image size: **518 × 518** *(chosen to align with DINOv2 patching: 518 ÷ 14 = 37 patches/side)*
 - Patch size: **14**
 - Classes: **4** (`Healthy`, `Benign`, `OPMD`, `OCA`)
 - Seed: **42**
@@ -153,4 +153,5 @@ The original paths and workflow are written for a **Kaggle-style runtime** (`/ka
 ## Notes
 
 - This repository currently contains the notebook as the source of truth.
+- The notebook filename is historical (it includes `efficientnet-b4` and `(3)`), but the current notebook content documents DINOv2 and extended multi-architecture pipelines.
 - If needed, the next step is to split notebook blocks into modular Python files (`data.py`, `model.py`, `train.py`, `evaluate.py`) for production use and easier reproducibility.
